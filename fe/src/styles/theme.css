@@ -1,0 +1,107 @@
+@theme inline {
+  --color-background: var(--background-base);
+  --color-background-base: var(--background-base);
+  --color-background-surface: var(--background-surface);
+  --color-background-settings: var(--background-settings);
+  --color-background-card: var(--background-card);
+  --color-background-elevated: var(--background-elevated);
+  --color-background-muted: var(--background-muted);
+  --color-background-overlay: var(--background-overlay);
+  --color-background-inverted: var(--background-inverted);
+  --color-background-table-header: var(--background-table-header);
+
+  --color-foreground: var(--text-primary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-inverted: var(--text-inverted);
+  --color-text-table-header: var(--text-table-header);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-primary-light: var(--primary-light);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-active: var(--secondary-active);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+  --color-error: var(--error);
+  --color-error-bg: var(--error-bg);
+
+  --color-border: var(--border-default);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-dark: var(--border-dark);
+  --color-ring: var(--primary);
+
+  --color-card: var(--background-surface);
+  --color-card-foreground: var(--text-primary);
+  --color-popover: var(--background-elevated);
+  --color-popover-foreground: var(--text-primary);
+  --color-muted: var(--background-surface);
+  --color-muted-foreground: var(--text-secondary);
+  --color-accent: var(--background-elevated);
+  --color-accent-foreground: var(--text-primary);
+  --color-destructive: var(--error);
+  --color-destructive-foreground: var(--background-base);
+  --color-input: var(--border-default);
+
+  --color-sidebar: var(--background-base);
+  --color-sidebar-foreground: var(--text-primary);
+  --color-sidebar-primary: var(--primary);
+  --color-sidebar-primary-foreground: var(--primary-foreground);
+  --color-sidebar-accent: var(--background-elevated);
+  --color-sidebar-accent-foreground: var(--text-primary);
+  --color-sidebar-border: var(--border-default);
+  --color-sidebar-ring: var(--primary);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --font-sans: var(--app-font-body);
+  --font-display: var(--app-font-display);
+
+  --radius: 6px;
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+  --radius-3xl: 11px;
+  --radius-4xl: 15px;
+
+  --spacing-app-xs: 4px;
+  --spacing-app-sm: 8px;
+  --spacing-app-md: 16px;
+  --spacing-app-lg: 24px;
+  --spacing-app-xl: 32px;
+
+  --breakpoint-tablet: 48rem;
+  --breakpoint-desktop: 80rem;
+
+  --shadow-xs: 0 1px 2px 0
+    color-mix(in srgb, var(--text-primary) 7%, transparent);
+}
+
+:root {
+  --motion-ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-ease-standard: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-duration-feedback: 100ms;
+  --motion-duration-small: 150ms;
+  --motion-duration-surface: 200ms;
+  --motion-duration-exit: 140ms;
+}

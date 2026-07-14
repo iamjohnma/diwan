@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light;
+
+  --background-base: #ffffff;
+  --background-surface: #fbfcfe;
+  --background-settings: #f7f7f8;
+  --background-elevated: #f5f5f5;
+  --background-card: rgba(253, 253, 253, 0.15);
+  --background-muted: #e3e9ef;
+  --background-overlay: #ffffff;
+  --background-inverted: #000000;
+  --background-table-header: #f9fafc;
+
+  --text-primary: #0a0a0a;
+  --foreground: var(--text-primary);
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --text-inverted: #ffffff;
+  --text-table-header: #636777;
+
+  --primary: #d03f3f;
+  --primary-hover: #b83535;
+  --primary-active: #9e2c2c;
+  --primary-light: #fde3e3;
+  --primary-foreground: #ffffff;
+
+  --secondary: #fdeeee;
+  --secondary-hover: #f9e4e4;
+  --secondary-active: #f4dada;
+  --secondary-foreground: #a02525;
+
+  --success: #56b550;
+  --success-bg: #e9f7dc;
+  --warning: #eab308;
+  --warning-bg: #fefce8;
+  --error: #f04842;
+  --error-bg: #fef2f2;
+
+  --border-default: #e5e5e5;
+  --border-subtle: #f5f5f5;
+  --border-strong: #bfbfbf;
+  --border-dark: #bfbfbf;
+
+  --chart-1: #d03f3f;
+  --chart-2: #dc6a6a;
+  --chart-3: #e69595;
+  --chart-4: #f0c0c0;
+  --chart-5: #f9e7e7;
+}

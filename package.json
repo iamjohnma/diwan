@@ -1,0 +1,36 @@
+{
+  "name": "diwan-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "bun@1.3.12",
+  "workspaces": [
+    "fe",
+    "be",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun scripts/run-stack.ts dev",
+    "preview": "bun scripts/run-stack.ts preview",
+    "dev:fe": "bun run --cwd fe dev",
+    "dev:be": "bun run --cwd be dev",
+    "preview:fe": "bun run --cwd fe preview",
+    "preview:be": "bun run --cwd be preview",
+    "check:root": "tsc -p tsconfig.json --noEmit --pretty",
+    "check": "bun run check:root && turbo run check",
+    "check:fix": "bun run --cwd fe check:fix",
+    "build": "bun run check:root && turbo run build",
+    "test": "turbo run test",
+    "verify": "bun run check && bun run build && bun run test",
+    "prepare": "husky",
+    "rbac:seed": "bun run --cwd be rbac:seed",
+    "seed:demo": "bun run --cwd be seed:demo",
+    "deploy": "bun run --cwd be deploy"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "husky": "^9.1.7",
+    "turbo": "^2.10.4",
+    "typescript": "^7.0.2"
+  }
+}

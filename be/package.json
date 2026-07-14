@@ -1,0 +1,34 @@
+{
+  "name": "diwan-be",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun scripts/local-convex.ts",
+    "preview": "bun scripts/local-convex.ts",
+    "check": "tsc -p tsconfig.json --noEmit --pretty",
+    "build": "bun run check",
+    "test": "vitest run --testTimeout=20000",
+    "rbac:seed": "convex run internal/rbac:seed '{}'",
+    "seed:demo": "bun scripts/seed-demo.ts",
+    "deploy": "convex deploy && bun run rbac:seed"
+  },
+  "dependencies": {
+    "@auth/core": "0.37.0",
+    "@aws-sdk/client-sesv2": "^3.1044.0",
+    "@convex-dev/auth": "^0.0.94",
+    "@diwan/shared": "workspace:*",
+    "@google/genai": "^2.8.0",
+    "convex": "^1.42.1",
+    "convex-helpers": "^0.1.120",
+    "jose": "^6.2.2",
+    "lucia": "^3.2.2"
+  },
+  "devDependencies": {
+    "@edge-runtime/vm": "^5.0.0",
+    "@types/node": "^26.1.1",
+    "convex-test": "^0.0.54",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}

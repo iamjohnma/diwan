@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "types": ["bun", "node"]
+  },
+  "include": ["scripts", "vite.config.ts"]
+}

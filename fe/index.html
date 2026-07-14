@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-font-size="medium">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="title" content="Diwan" />
+    <meta
+      name="description"
+      content="نظام إدارة القضايا القانونية للمكاتب المهنية"
+    />
+    <meta property="og:title" content="Diwan" />
+    <meta
+      property="og:description"
+      content="نظام إدارة القضايا القانونية للمكاتب المهنية"
+    />
+    <meta property="og:locale" content="ar_EG" />
+    <meta name="twitter:title" content="Diwan" />
+    <meta
+      name="twitter:description"
+      content="نظام إدارة القضايا القانونية للمكاتب المهنية"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Diwan</title>
+    <script>
+      (() => {
+        const LANGUAGE_STORAGE_KEY = 'diwan:language';
+        const FALLBACK_LANGUAGE = 'ar';
+        const root = document.documentElement;
+
+        const localizedMeta = {
+          en: {
+            title: 'Diwan',
+            description:
+              'Legal case management system for professional law firms',
+            ogLocale: 'en_US'
+          },
+          ar: {
+            title: 'ديوان',
+            description: 'نظام إدارة القضايا القانونية للمكاتب المهنية',
+            ogLocale: 'ar_EG'
+          }
+        };
+
+        const normalizeLanguage = (language) => {
+          if (typeof language !== 'string') return null;
+          const n = String(language).replace(/"/g, '').split('-')[0];
+          return n === 'ar' || n === 'en' ? n : null;
+        };
+
+        let language = FALLBACK_LANGUAGE;
+        let savedFontSize = null;
+
+        try {
+          language =
+            normalizeLanguage(localStorage.getItem(LANGUAGE_STORAGE_KEY)) ||
+            normalizeLanguage(navigator.language) ||
+            FALLBACK_LANGUAGE;
+          savedFontSize = localStorage.getItem('diwan:font-size');
+        } catch {
+          // Storage can be unavailable in privacy-restricted browsing modes.
+        }
+
+        const meta = localizedMeta[language] || localizedMeta[FALLBACK_LANGUAGE];
+        const fontSize = ['small', 'medium', 'large'].includes(savedFontSize)
+          ? savedFontSize
+          : 'medium';
+        const direction = language === 'ar' ? 'rtl' : 'ltr';
+
+        root.lang = language;
+        root.dir = direction;
+        root.dataset.fontSize = fontSize;
+        root.classList.remove('dark');
+        root.style.colorScheme = 'light';
+
+        document.title = meta.title;
+        const setMeta = (selector, content) => {
+          document.querySelector(selector)?.setAttribute('content', content);
+        };
+        setMeta('meta[name="title"]', meta.title);
+        setMeta('meta[name="description"]', meta.description);
+        setMeta('meta[property="og:title"]', meta.title);
+        setMeta('meta[property="og:description"]', meta.description);
+        setMeta('meta[property="og:locale"]', meta.ogLocale);
+        setMeta('meta[name="twitter:title"]', meta.title);
+        setMeta('meta[name="twitter:description"]', meta.description);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

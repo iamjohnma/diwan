@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "paths": {
+      "@diwan/shared": ["../packages/shared/src/index.ts"],
+      "@diwan/shared/*": ["../packages/shared/src/*"]
+    }
+  },
+  "include": ["convex", "scripts"],
+  "exclude": ["convex/_generated", "../node_modules"]
+}

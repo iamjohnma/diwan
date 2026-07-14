@@ -1,0 +1,79 @@
+/*
+ * Tajawal is the ONLY typeface allowed system-wide. The three woff2 files
+ * are copied verbatim from Naab (src/assets/fonts/tajawal) — that build
+ * carries custom vertical-metric adjustments that keep Arabic text visually
+ * centered inside fixed-height rows. Do not replace them with a public web
+ * build of the font.
+ */
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../assets/fonts/tajawal/Tajawal-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../assets/fonts/tajawal/Tajawal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../assets/fonts/tajawal/Tajawal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@theme {
+  --text-xs: calc(0.75rem * var(--font-scale));
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: calc(0.875rem * var(--font-scale));
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: calc(1rem * var(--font-scale));
+  --text-base--line-height: 1.5;
+  --text-lg: calc(1.125rem * var(--font-scale));
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: calc(1.25rem * var(--font-scale));
+  --text-xl--line-height: 1.4;
+  --text-2xl: calc(1.5rem * var(--font-scale));
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: calc(1.875rem * var(--font-scale));
+  --text-3xl--line-height: 1.2;
+  --text-4xl: calc(2.25rem * var(--font-scale));
+  --text-4xl--line-height: calc(2.5 / 2.25);
+}
+
+:root {
+  --font-scale: 1;
+  --app-font-family-rtl:
+    'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --app-font-family-ltr:
+    'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --app-font-body: var(--app-font-family-rtl);
+  --app-font-display: var(--app-font-family-rtl);
+}
+
+:root[dir='rtl'] {
+  --app-font-body: var(--app-font-family-rtl);
+}
+
+:root[dir='ltr'] {
+  --app-font-body: var(--app-font-family-ltr);
+}
+
+:root[data-font-size='small'] {
+  --font-scale: 0.9;
+}
+
+:root[data-font-size='medium'] {
+  --font-scale: 1;
+}
+
+:root[data-font-size='large'] {
+  --font-scale: 1.1;
+}

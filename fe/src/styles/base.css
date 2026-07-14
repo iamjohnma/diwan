@@ -1,0 +1,148 @@
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-color: var(--border-default);
+  }
+
+  html {
+    min-width: 320px;
+    min-height: 100%;
+    background: var(--background-base);
+    color: var(--text-primary);
+    font-family: var(--app-font-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    background: var(--background-base);
+    color: var(--text-primary);
+    font-family: var(--app-font-body);
+    line-height: normal;
+    text-align: start;
+    /* Match Naab: document never scrolls; the app shell owns overflow. */
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--app-font-display);
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+  }
+
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+
+  :disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      monospace;
+  }
+
+  [dir='auto'] {
+    text-align: start;
+  }
+
+  .react-colorful {
+    width: 100%;
+    height: auto;
+    gap: 0;
+    border: none;
+    background: transparent;
+    touch-action: none;
+  }
+
+  .react-colorful__saturation {
+    height: 140px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .react-colorful__hue {
+    height: 12px;
+    border-radius: 6px;
+  }
+
+  .react-colorful__saturation-pointer {
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
+  }
+
+  .react-colorful__hue-pointer {
+    width: 18px;
+    height: 18px;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  }
+
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-sm);
+    background: var(--border-strong);
+  }
+
+  @media (forced-colors: active) {
+    :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}

@@ -1,0 +1,825 @@
+{
+  "meta": {
+    "appTitle": "ديوان",
+    "appDescription": "نظام إدارة القضايا القانونية للمكاتب المهنية"
+  },
+  "common": {
+    "appName": "Diwan",
+    "showPassword": "إظهار كلمة المرور",
+    "hidePassword": "إخفاء كلمة المرور",
+    "passwordStrength": {
+      "minLength": "8 أحرف",
+      "numbers": "رقم واحد",
+      "specialSymbols": "رمز خاص"
+    },
+    "loading": "جارٍ التحميل...",
+    "noResults": "لا توجد نتائج",
+    "clear": "مسح",
+    "addValue": "إضافة \"{{value}}\"",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "close": "إغلاق",
+    "add": "إضافة",
+    "next": "التالي",
+    "create": "إنشاء",
+    "search": "بحث...",
+    "menu": "القائمة",
+    "updateNow": "حدّث الآن",
+    "skipToContent": "انتقل إلى المحتوى",
+    "signOut": "تسجيل الخروج",
+    "offline": "لا يوجد اتصال بالإنترنت",
+    "language": {
+      "english": "الإنجليزية",
+      "arabic": "العربية"
+    },
+    "drawerAccessibility": {
+      "popoverTitle": "خيارات",
+      "popoverDescription": "خيارات وإجراءات إضافية",
+      "selectTitle": "اختر خياراً",
+      "selectDescription": "اختر خياراً من القائمة",
+      "dynamicPopoverTitle": "القائمة",
+      "dynamicPopoverDescription": "خيارات الحساب والإشعارات"
+    },
+    "tooltips": {
+      "clear": "مسح",
+      "previousPage": "الصفحة السابقة",
+      "nextPage": "الصفحة التالية",
+      "notifications": "الإشعارات",
+      "changeLanguage": "تغيير اللغة",
+      "signOut": "تسجيل الخروج",
+      "previous": "السابق",
+      "next": "التالي",
+      "exitFullscreen": "الخروج من ملء الشاشة",
+      "enterFullscreen": "ملء الشاشة"
+    },
+    "dataTable": {
+      "documents_one": "قضية واحدة",
+      "documents_two": "قضيتان",
+      "documents_few": "{{count}} قضايا",
+      "documents_many": "{{count}} قضية",
+      "documents_other": "{{count}} قضية",
+      "entries_one": "قضية",
+      "entries_two": "قضية",
+      "entries_few": "قضية",
+      "entries_many": "قضية",
+      "entries_other": "قضية",
+      "showingEntries": "{{start}}–{{end}} من {{total}}",
+      "criteriaEmptyTitle": "لا توجد قضايا مطابقة",
+      "criteriaEmptyDescription": "لا توجد قضايا ضمن هذه الحالة حالياً.",
+      "errorTitle": "تعذّر تحميل البيانات",
+      "errorDescription": "يرجى المحاولة مرة أخرى بعد قليل.",
+      "retry": "حاول مرة أخرى",
+      "search": "بحث",
+      "searchPlaceholder": "بحث",
+      "selectAllRows": "تحديد جميع الصفوف",
+      "selectRow": "تحديد الصف"
+    },
+    "advancedFilter": {
+      "where": "حيث",
+      "and": "و",
+      "or": "أو",
+      "filter": "تصفية",
+      "addFilterRule": "إضافة قاعدة تصفية",
+      "addFilterGroup": "إضافة مجموعة تصفية",
+      "remove": "إزالة",
+      "duplicate": "تكرار",
+      "turnIntoGroup": "تحويل إلى مجموعة",
+      "value": "القيمة",
+      "operator": "المشغّل",
+      "saveChanges": "حفظ التغييرات",
+      "removeFilter": "إزالة الفلتر",
+      "clearFilter": "مسح عوامل التصفية",
+      "operators": {
+        "contains": "يحتوي على",
+        "notContains": "لا يحتوي على",
+        "equals": "يساوي",
+        "notEquals": "لا يساوي",
+        "startsWith": "يبدأ بـ",
+        "endsWith": "ينتهي بـ",
+        "isEmpty": "فارغ",
+        "isNotEmpty": "غير فارغ",
+        "greaterThan": "أكبر من",
+        "greaterThanOrEqual": "أكبر من أو يساوي",
+        "lessThan": "أقل من",
+        "lessThanOrEqual": "أقل من أو يساوي",
+        "isTrue": "صحيح",
+        "isFalse": "خاطئ",
+        "is": "هو",
+        "isNot": "ليس",
+        "isAnyOf": "أي من",
+        "isNoneOf": "ليس أياً من"
+      }
+    },
+    "dialog": {
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "confirm": "تأكيد",
+      "close": "إغلاق",
+      "searchPlaceholder": "بحث...",
+      "emptyList": "لا توجد نتائج",
+      "unsavedChanges": {
+        "title": "تغييرات غير محفوظة",
+        "description": "لديك تغييرات غير محفوظة. هل تريد المغادرة دون حفظ؟",
+        "stayButton": "البقاء",
+        "leaveButton": "مغادرة"
+      }
+    }
+  },
+  "keyboardShortcuts": {
+    "title": "اختصارات لوحة المفاتيح",
+    "hint": "اضغط لإظهار أو إخفاء هذه النافذة",
+    "groups": {
+      "general": "عام",
+      "calendar": "التقويم"
+    },
+    "shortcuts": {
+      "openSearch": "فتح البحث",
+      "openAiAssistant": "فتح مساعد الذكاء الاصطناعي",
+      "toggleAiAssistantVoice": "بدء أو إيقاف المساعد الصوتي",
+      "openKeyboardShortcuts": "فتح اختصارات لوحة المفاتيح",
+      "toggleSidebar": "طيّ الشريط الجانبي أو توسعته",
+      "toggleFullscreen": "تبديل ملء الشاشة",
+      "goToToday": "الانتقال إلى اليوم",
+      "scrollCalendar": "تمرير التقويم",
+      "deleteSelected": "حذف المواعيد المحددة",
+      "setRangeDays": "تعيين عدد الأيام الظاهرة (عرض الأيام)",
+      "exitFullscreen": "الخروج من ملء الشاشة"
+    }
+  },
+  "aiAssistant": {
+    "title": "مساعد الذكاء الاصطناعي",
+    "newConversation": "محادثة جديدة",
+    "noConversations": "لا توجد محادثات بعد",
+    "emptyTitle": "كيف يمكنني مساعدتك في القضايا؟",
+    "inputPlaceholder": "اسأل عن قضاياك…",
+    "threads": {
+      "empty": "لا توجد محادثات بعد",
+      "noResults": "لم يتم العثور على محادثات",
+      "searchPlaceholder": "ابحث عن المحادثات"
+    },
+    "actions": {
+      "startNewChat": "بدء محادثة جديدة",
+      "expand": "توسيع",
+      "collapse": "تصغير",
+      "close": "إغلاق",
+      "minimize": "طي",
+      "mute": "كتم الميكروفون",
+      "unmute": "إلغاء كتم الميكروفون",
+      "toggleMicrophone": "تبديل الميكروفون",
+      "stopVoice": "إيقاف المساعد الصوتي",
+      "stop": "إيقاف",
+      "voiceShortcut": "المساعد الصوتي (Ctrl+G)",
+      "responding": "المساعد يجيب",
+      "send": "إرسال"
+    },
+    "errors": {
+      "unavailable": "المساعد غير متاح الآن. يرجى المحاولة مرة أخرى.",
+      "requestFailed": "فشل طلب المساعد"
+    },
+    "voice": {
+      "connecting": "جارٍ الاتصال…",
+      "thinking": "جارٍ التفكير…",
+      "speaking": "يتحدث…",
+      "listening": "يستمع…",
+      "holdToRecord": "اضغط مطولاً للتسجيل",
+      "releaseToStop": "اترك الزر للإيقاف",
+      "voicePlaceholder": "جارٍ الاستماع…"
+    },
+    "tools": {
+      "listingCases": "جارٍ عرض القضايا",
+      "listedCases_zero": "لم يتم العثور على قضايا",
+      "listedCases_one": "تم عرض قضية واحدة",
+      "listedCases_two": "تم عرض قضيتين",
+      "listedCases_few": "تم عرض {{count}} قضايا",
+      "listedCases_many": "تم عرض {{count}} قضية",
+      "listedCases_other": "تم عرض {{count}} قضية"
+    }
+  },
+  "commandPalette": {
+    "title": "البحث السريع",
+    "description": "ابحث في صفحات النظام والقضايا والأطراف والمستندات.",
+    "searchPlaceholder": "ابحث عن صفحة أو إجراء...",
+    "empty": "لا توجد نتائج",
+    "emptyDescription": "جرّب كلمة أخرى أو تصفح القائمة الجانبية.",
+    "footer": {
+      "navigate": "تنقل",
+      "select": "اختيار",
+      "back": "رجوع",
+      "close": "إغلاق"
+    },
+    "groups": {
+      "navigation": "التنقل",
+      "settings": "الإعدادات",
+      "cases": "القضايا",
+      "parties": "الأطراف",
+      "documents": "المستندات",
+      "billing": "الفوترة"
+    },
+    "items": {
+      "dashboard": "لوحة المتابعة",
+      "calendar": "الجلسات والتقويم",
+      "cases": "القضايا",
+      "parties": "الأطراف",
+      "documents": "المستندات",
+      "billing": "الفوترة",
+      "payments": "المدفوعات",
+      "checks": "الشيكات",
+      "installments": "الأقساط",
+      "settings": "الإعدادات"
+    },
+    "keywords": {
+      "dashboard": ["dashboard", "home", "رئيسية", "متابعة"],
+      "calendar": ["calendar", "hearings", "جلسات", "تقويم", "مواعيد"],
+      "cases": ["cases", "قضايا", "قضية"],
+      "parties": ["parties", "أطراف", "موكل", "خصم"],
+      "documents": ["documents", "مستندات", "ملفات"],
+      "billing": ["billing", "فوترة", "مالية"],
+      "payments": ["payments", "مدفوعات", "سند"],
+      "checks": ["checks", "شيكات", "شيك"],
+      "installments": ["installments", "أقساط", "قسط"],
+      "settings": ["settings", "إعدادات", "تفضيلات"]
+    }
+  },
+  "header": {
+    "menu": "القائمة",
+    "notifications": "الإشعارات",
+    "settings": "الإعدادات",
+    "signOut": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "noName": "بدون اسم",
+    "updateNow": "حدّث الآن",
+    "globalSearch": "بحث سريع",
+    "roles": {
+      "owner": "مالك",
+      "admin": "مشرف",
+      "member": "عضو",
+      "lawyer": "محامٍ",
+      "assistant": "مساعد"
+    }
+  },
+  "dashboard": {
+    "title": "لوحة المتابعة",
+    "cards": {
+      "previous": "البطاقات السابقة",
+      "next": "البطاقات التالية"
+    },
+    "privacy": {
+      "reveal": "إظهار الأرقام الحساسة",
+      "hide": "إخفاء الأرقام الحساسة",
+      "clickToReveal": "اضغط للإظهار"
+    },
+    "kpi": {
+      "revenue": {
+        "title": "إيراداتي",
+        "description": "إجمالي المدفوعات المقبوضة"
+      },
+      "outstanding": {
+        "title": "أتعابي المستحقة",
+        "description": "المبالغ المستحقة لك"
+      },
+      "activeCases": {
+        "title": "قضاياي النشطة",
+        "description": "القضايا المفتوحة والمسندة إليك"
+      }
+    },
+    "fastAccess": {
+      "createCase": "إضافة قضية",
+      "createCaseUnavailable": "ستُتاح نافذة إنشاء القضية في المرحلة القادمة.",
+      "addHearing": "إضافة جلسة",
+      "recordPayment": "تسجيل دفعة"
+    },
+    "todayHearings": {
+      "title": "جلساتي اليوم",
+      "subtitle": "جلساتك القادمة لهذا اليوم",
+      "add": "إضافة جلسة",
+      "caseLabel": "القضية {{number}}",
+      "unknownLawyer": "محامٍ غير معروف",
+      "countdownMinutes": "بعد {{count}} د",
+      "countdownHours": "بعد {{count}} س",
+      "countdownHoursMinutes": "بعد {{hours}} س {{minutes}} د",
+      "empty": {
+        "title": "لا توجد جلسات مجدولة",
+        "description": "لا توجد جلسات قادمة اليوم."
+      }
+    },
+    "cashFlow": {
+      "title": "التدفق النقدي",
+      "subtitle": "دخلك بمرور الوقت",
+      "income": "الدخل",
+      "chartLabel": "مخطط التدفق النقدي للدخل",
+      "periods": {
+        "weekly": "أسبوعي",
+        "monthly": "شهري"
+      }
+    },
+    "allCases": {
+      "title": "قضاياي",
+      "subtitle": "القضايا المسجلة والمسندة إليك",
+      "search": "البحث في القضايا",
+      "clearSearch": "مسح البحث",
+      "filters": {
+        "all": "جميع القضايا"
+      },
+      "emptyTitle": "لا توجد قضايا مطابقة للفلاتر الحالية",
+      "emptyDescription": "جرّب تعديل البحث أو الفلاتر للعثور على ما تبحث عنه.",
+      "pagination": {
+        "previous": "السابق",
+        "next": "التالي"
+      }
+    }
+  },
+  "signIn": {
+    "pageHeader": {
+      "title": "مرحباً بعودتك",
+      "subtitle": "سجّل الدخول للمتابعة."
+    },
+    "formContent": {
+      "emailLabel": "البريد الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "emailPlaceholder": "أدخل البريد الإلكتروني",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "forgotPassword": "نسيت كلمة المرور؟",
+      "submitButton": "تسجيل الدخول",
+      "separator": "أو",
+      "googleButton": "المتابعة باستخدام Google"
+    },
+    "formFooter": {
+      "accountPrompt": "ليس لديك حساب؟",
+      "actionLink": "إنشاء حساب"
+    },
+    "validation": {
+      "emailRequired": "يرجى إدخال بريدك الإلكتروني",
+      "emailInvalid": "عنوان البريد الإلكتروني غير صالح",
+      "passwordRequired": "يرجى إدخال كلمة المرور"
+    }
+  },
+  "signUp": {
+    "pageHeader": {
+      "title": "مرحباً بك في ديوان",
+      "subtitle": "أنشئ حسابك للمتابعة."
+    },
+    "formContent": {
+      "firstNameLabel": "الاسم الأول",
+      "lastNameLabel": "اسم العائلة",
+      "emailLabel": "البريد الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "firstNamePlaceholder": "أدخل الاسم الأول",
+      "lastNamePlaceholder": "أدخل اسم العائلة",
+      "emailPlaceholder": "أدخل البريد الإلكتروني",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "submitButton": "إنشاء حساب",
+      "separator": "أو",
+      "googleButton": "المتابعة باستخدام Google"
+    },
+    "formFooter": {
+      "accountPrompt": "لديك حساب بالفعل؟",
+      "actionLink": "تسجيل الدخول"
+    },
+    "validation": {
+      "firstNameRequired": "يرجى إدخال الاسم الأول",
+      "firstNameMin": "يجب ألا يقل الاسم الأول عن حرفين",
+      "firstNameMax": "يجب ألا يزيد الاسم الأول عن 50 حرفاً",
+      "lastNameRequired": "يرجى إدخال اسم العائلة",
+      "lastNameMin": "يجب ألا يقل اسم العائلة عن حرفين",
+      "lastNameMax": "يجب ألا يزيد اسم العائلة عن 50 حرفاً",
+      "emailRequired": "يرجى إدخال بريدك الإلكتروني",
+      "emailInvalid": "عنوان البريد الإلكتروني غير صالح",
+      "emailMax": "يجب ألا يزيد البريد الإلكتروني عن 255 حرفاً",
+      "passwordRequired": "يرجى إدخال كلمة المرور",
+      "passwordMin": "يجب ألا تقل كلمة المرور عن 8 أحرف",
+      "passwordMax": "يجب ألا تزيد كلمة المرور عن 128 حرفاً",
+      "passwordNumber": "يجب أن تتضمن كلمة المرور رقماً",
+      "passwordSpecialSymbol": "يجب أن تتضمن كلمة المرور رمزاً خاصاً"
+    }
+  },
+  "forgotPassword": {
+    "pageHeader": {
+      "title": "نسيت كلمة المرور؟",
+      "subtitle": "أدخل بريدك الإلكتروني لاستلام رمز إعادة التعيين."
+    },
+    "formContent": {
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل البريد الإلكتروني",
+      "submitButton": "إرسال رمز إعادة التعيين"
+    },
+    "formFooter": { "backToSignIn": "العودة إلى تسجيل الدخول" },
+    "validation": {
+      "emailRequired": "يرجى إدخال بريدك الإلكتروني",
+      "emailInvalid": "عنوان البريد الإلكتروني غير صالح"
+    }
+  },
+  "verifyOtp": {
+    "pageHeader": {
+      "emailVerification": {
+        "title": "تحقق من بريدك الإلكتروني",
+        "subtitle": "أرسلنا رمز تحقق إلى <email>{{email}}</email>."
+      },
+      "resetPassword": {
+        "title": "أدخل رمز إعادة التعيين",
+        "subtitle": "أرسلنا رمز إعادة تعيين كلمة المرور إلى <email>{{email}}</email>."
+      },
+      "subtitleFallback": "أدخل رمز التحقق المرسل إلى بريدك الإلكتروني."
+    },
+    "codeInputLabel": "رمز التحقق",
+    "pageFooter": {
+      "resendPrompt": "لم يصلك الرمز؟",
+      "resendButton": "إعادة الإرسال",
+      "resendUnavailable": "تحقق من بريدك الإلكتروني للحصول على الرمز."
+    },
+    "validation": {
+      "codeRequired": "يرجى إدخال رمز التحقق",
+      "codeLength": "يجب أن يتكون الرمز من 5 أرقام",
+      "codeNumeric": "يجب أن يتكون الرمز من أرقام فقط"
+    }
+  },
+  "setNewPassword": {
+    "pageHeader": {
+      "title": "تعيين كلمة مرور جديدة",
+      "subtitle": "أنشئ كلمة مرور قوية لحسابك."
+    },
+    "formContent": {
+      "passwordLabel": "كلمة المرور الجديدة",
+      "passwordPlaceholder": "أدخل كلمة المرور الجديدة",
+      "confirmPasswordLabel": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+      "submitButton": "إعادة تعيين كلمة المرور"
+    },
+    "validation": {
+      "passwordRequired": "يرجى إدخال كلمة المرور",
+      "passwordMin": "يجب ألا تقل كلمة المرور عن 8 أحرف",
+      "passwordMax": "يجب ألا تزيد كلمة المرور عن 128 حرفاً",
+      "passwordNumber": "يجب أن تتضمن كلمة المرور رقماً",
+      "passwordSpecialSymbol": "يجب أن تتضمن كلمة المرور رمزاً خاصاً",
+      "confirmPasswordRequired": "يرجى تأكيد كلمة المرور",
+      "passwordsMustMatch": "كلمتا المرور غير متطابقتين"
+    },
+    "success": "تمت إعادة تعيين كلمة المرور بنجاح"
+  },
+  "errors": {
+    "default": "تعذر إتمام العملية، حاول مرة أخرى.",
+    "route": {
+      "title": "حدث خطأ غير متوقع",
+      "description": "نأسف للإزعاج، حاول إعادة تحميل الصفحة.",
+      "retry": "إعادة المحاولة",
+      "reload": "إعادة التحميل"
+    },
+    "notFoundPage": {
+      "title": "الصفحة غير موجودة",
+      "description": "الرابط الذي طلبته غير متوفر أو تم نقله.",
+      "backHome": "العودة إلى الرئيسية"
+    },
+    "code": {
+      "UNAUTHENTICATED": "انتهت الجلسة، سجّل الدخول مرة أخرى.",
+      "NOT_A_FIRM_MEMBER": "لست عضواً في هذا المكتب.",
+      "INSUFFICIENT_PERMISSIONS": "ليست لديك الصلاحية اللازمة لهذا الإجراء.",
+      "INVALID_ACCOUNT_ID": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "INVALID_PASSWORD": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "INVALID_SECRET": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "INVALID_CREDENTIALS": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "INVALID_VERIFICATION_CODE": "رمز التحقق غير صحيح أو انتهت صلاحيته.",
+      "INVALID_AUTH_FLOW": "طلب تسجيل الدخول هذا لم يعد صالحاً. يرجى البدء من جديد.",
+      "EMAIL_REQUIRED": "أدخل بريدك الإلكتروني.",
+      "PASSWORD_REQUIRED": "أدخل كلمة المرور.",
+      "PASSWORD_TOO_SHORT": "يجب ألا تقل كلمة المرور عن 8 أحرف.",
+      "PASSWORD_TOO_LONG": "يجب ألا تتجاوز كلمة المرور 128 حرفاً.",
+      "PASSWORD_REQUIRES_NUMBER": "يجب أن تتضمن كلمة المرور رقماً.",
+      "PASSWORD_REQUIRES_SPECIAL_SYMBOL": "يجب أن تتضمن كلمة المرور رمزاً خاصاً.",
+      "NEW_PASSWORD_REQUIRED": "أدخل كلمة المرور الجديدة.",
+      "ACCOUNT_ALREADY_EXISTS": "يوجد حساب مسجل بهذا البريد الإلكتروني.",
+      "ACCOUNT_DISABLED": "تم تعطيل هذا الحساب. تواصل مع الدعم للمساعدة.",
+      "GOOGLE_OAUTH_NOT_CONFIGURED": "تسجيل الدخول عبر Google غير مهيأ بعد.",
+      "INVALID_GOOGLE_CREDENTIAL": "تعذر على Google التحقق من تسجيل الدخول. حاول مرة أخرى.",
+      "GOOGLE_ID_TOKEN_REQUIRED": "لم تُرجع Google بيانات تسجيل دخول صالحة. حاول مرة أخرى."
+    }
+  },
+  "sidebar": {
+    "navigationLabel": "التنقل الرئيسي",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "globalSearch": {
+      "placeholder": "ابحث عن أي شيء",
+      "ariaLabel": "بحث سريع"
+    }
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "markAllAsRead": "تحديد الكل كمقروء",
+    "markAsRead": "تحديد كمقروء",
+    "empty": "لا توجد إشعارات",
+    "emptyDescription": "ستظهر الإشعارات هنا عندما يحدث شيء ما",
+    "preferencesOpenLabel": "تفضيلات الإشعارات"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "cancel": "إلغاء",
+    "saveChanges": "حفظ التغييرات",
+    "tabs": {
+      "profile": "الملف الشخصي",
+      "appearance": "المظهر"
+    },
+    "profile": {
+      "noName": "بدون اسم",
+      "accountPhoto": "صورة الحساب",
+      "fullName": "الاسم الكامل",
+      "userId": "معرّف المستخدم",
+      "email": "البريد الإلكتروني",
+      "role": "الدور",
+      "change": "تغيير",
+      "copy": "نسخ",
+      "idCopied": "تم نسخ معرّف المستخدم",
+      "emailCopied": "تم نسخ البريد الإلكتروني",
+      "roles": {
+        "owner": "المالك",
+        "admin": "مدير النظام",
+        "partner": "شريك",
+        "lawyer": "محامٍ",
+        "associate": "محامٍ مساعد",
+        "assistant": "مساعد",
+        "finance": "المالية",
+        "member": "عضو"
+      }
+    },
+    "password": {
+      "label": "كلمة المرور",
+      "description": "غيّر كلمة المرور المستخدمة لتسجيل الدخول إلى حسابك.",
+      "changeAction": "تغيير كلمة المرور"
+    },
+    "editNameDialog": {
+      "title": "تغيير الاسم",
+      "nameLabel": "الاسم الكامل",
+      "namePlaceholder": "أدخل اسمك الكامل"
+    },
+    "appearance": {
+      "systemColor": {
+        "title": "لون النظام",
+        "description": "اختر اللون الرئيسي المستخدم في جميع أجزاء النظام.",
+        "selectColor": "استخدام اللون {{color}} كلون للنظام",
+        "custom": "اختيار لون مخصص",
+        "saveColor": "حفظ هذا اللون المخصص",
+        "maxColorsReached": "يمكنك إضافة {{count}} ألوان كحد أقصى.",
+        "foregroundOverride": {
+          "auto": "لون النص التلقائي",
+          "dark": "فرض نص داكن",
+          "light": "فرض نص فاتح",
+          "description": "تجاوز لون النص: {{mode}}"
+        }
+      },
+      "fontSize": {
+        "title": "حجم الخط",
+        "description": "اضبط حجم النص في جميع أجزاء النظام.",
+        "small": "صغير",
+        "medium": "متوسط",
+        "large": "كبير"
+      },
+      "language": {
+        "title": "اللغة",
+        "description": "اختر لغة النظام واتجاه القراءة.",
+        "system": "لغة الجهاز"
+      },
+      "hideNumbers": {
+        "title": "إخفاء الأرقام الحساسة",
+        "description": "إخفاء الأرقام المالية وأرقام التعريف الحساسة.",
+        "hidden": "مخفية",
+        "visible": "ظاهرة"
+      },
+      "fastAccessButtons": {
+        "title": "بطاقات أعلى لوحة المتابعة",
+        "description": "اختر بين مؤشرات الأداء والاختصارات السريعة.",
+        "kpis": "مؤشرات الأداء",
+        "actions": "اختصارات سريعة"
+      },
+      "commandPaletteOnType": {
+        "title": "فتح البحث السريع عند الكتابة",
+        "description": "ابدأ الكتابة في أي مكان لفتح البحث السريع مباشرة.",
+        "enabled": "مفعّل",
+        "disabled": "معطّل"
+      },
+      "unsavedChangesBehaviour": {
+        "title": "التغييرات غير المحفوظة",
+        "description": "اختر ما يحدث عند مغادرة نموذج يحتوي على تغييرات غير محفوظة.",
+        "ask": "اسأل أولاً",
+        "discard": "تجاهل"
+      },
+      "tableRowsFill": {
+        "title": "صفوف الجداول",
+        "description": "اختر ما إذا كانت صفوف الجداول تملأ الارتفاع المتاح.",
+        "fill": "ملء المساحة",
+        "fixed": "ارتفاع ثابت"
+      },
+      "sidebar": {
+        "title": "الشريط الجانبي",
+        "description": "اختر كيفية ظهور الشريط الجانبي عند فتح النظام.",
+        "open": "مفتوح",
+        "closed": "مغلق",
+        "remember": "تذكّر آخر حالة"
+      }
+    }
+  },
+  "fontSize": {
+    "label": "حجم الخط",
+    "small": "صغير",
+    "medium": "متوسط",
+    "large": "كبير"
+  },
+  "placeholderPage": {
+    "description": "هذه الوحدة قيد البناء وستتوفر في التحديثات القادمة."
+  },
+  "cases": {
+    "all": "الكل",
+    "previousPage": "الصفحة السابقة",
+    "nextPage": "الصفحة التالية",
+    "addCase": "إضافة قضية",
+    "searchPlaceholder": "بحث في القضايا",
+    "emptyTitle": "لا توجد قضايا بعد",
+    "emptyDescription": "ستظهر قضايا المكتب هنا بعد إضافتها.",
+    "criteriaEmptyTitle": "لا توجد قضايا مطابقة",
+    "criteriaEmptyDescription": "لا توجد قضايا ضمن هذه الحالة حالياً.",
+    "errorTitle": "تعذّر تحميل القضايا",
+    "errorDescription": "يرجى المحاولة مرة أخرى بعد قليل.",
+    "retry": "حاول مرة أخرى",
+    "columns": {
+      "internalNumber": "رقم القضية",
+      "courtNumber": "رقم المحكمة",
+      "courtName": "المحكمة",
+      "caseType": "نوع القضية",
+      "primaryLawyer": "المحامي المسؤول",
+      "claimAmount": "قيمة المطالبة",
+      "status": "الحالة",
+      "createdAt": "تاريخ الإنشاء"
+    },
+    "statuses": {
+      "intake": "قيد الاستقبال",
+      "filed": "مرفوعة",
+      "in_hearings": "في الجلسات",
+      "verdict": "صدر حكم",
+      "execution": "قيد التنفيذ",
+      "closed": "مغلقة",
+      "archived": "مؤرشفة"
+    },
+    "labels": {
+      "entries_zero": "قضية",
+      "entries_one": "قضية",
+      "entries_two": "قضيتان",
+      "entries_few": "قضايا",
+      "entries_many": "قضية",
+      "entries_other": "قضية",
+      "documents_zero": "{{count}} قضايا",
+      "documents_one": "{{count}} قضية",
+      "documents_two": "{{count}} قضيتان",
+      "documents_few": "{{count}} قضايا",
+      "documents_many": "{{count}} قضية",
+      "documents_other": "{{count}} قضية"
+    },
+    "createDialog": {
+      "title": "إضافة قضية",
+      "partiesTitle": "أطراف القضية",
+      "reviewTitle": "مراجعة وإنشاء",
+      "addParty": "إضافة طرف",
+      "partiesEmpty": "لم تُضف أطرافاً بعد. يمكنك المتابعة الآن وإضافتهم لاحقاً إن لم يكن النوع يتطلب ذلك.",
+      "partiesNone": "بدون أطراف",
+      "primaryLawyerFallback": "أنت",
+      "success": "تم إنشاء القضية بنجاح",
+      "fields": {
+        "internalNumber": "الرقم الداخلي",
+        "courtNumber": "رقم القضية لدى المحكمة",
+        "caseType": "نوع القضية",
+        "courtName": "اسم المحكمة",
+        "claimAmount": "قيمة المطالبة",
+        "primaryLawyer": "المحامي المسؤول",
+        "parties": "الأطراف",
+        "partyFullName": "الاسم الكامل",
+        "partyNationalId": "رقم الهوية",
+        "partyRole": "صفة الطرف"
+      },
+      "placeholders": {
+        "internalNumber": "أدخل الرقم الداخلي",
+        "courtNumber": "أدخل رقم المحكمة",
+        "caseType": "اختر نوع القضية",
+        "courtName": "أدخل اسم المحكمة",
+        "claimAmount": "أدخل قيمة المطالبة",
+        "partyFullName": "أدخل اسم الطرف",
+        "partyNationalId": "أدخل رقم الهوية",
+        "partyRole": "اختر الصفة"
+      },
+      "roles": {
+        "plaintiff": "مدّعي",
+        "defendant": "مدّعى عليه",
+        "guardian": "ولي أمر",
+        "intervener": "متدخل",
+        "witness": "شاهد",
+        "other": "أخرى"
+      },
+      "validation": {
+        "internalNumberRequired": "الرقم الداخلي مطلوب",
+        "caseTypeRequired": "نوع القضية مطلوب",
+        "nationalIdRequired": "رقم الهوية مطلوب",
+        "fullNameRequired": "الاسم الكامل مطلوب",
+        "roleRequired": "صفة الطرف مطلوبة",
+        "claimAmountInvalid": "أدخل قيمة مطالبة صحيحة",
+        "requiredRoleMissing": "أضف طرفاً بصفة {{role}} قبل المتابعة"
+      },
+      "errors": {
+        "caseTypesUnavailable": "تعذّر تحميل أنواع القضايا",
+        "noCaseTypes": "لا توجد أنواع قضايا بعد. أضفها من الإعدادات أولاً.",
+        "profileUnavailable": "تعذّر تحديد المحامي المسؤول"
+      }
+    }
+  },
+  "calendarPage": {
+    "title": "الجلسات والتقويم",
+    "eventDetails": "تفاصيل الموعد",
+    "close": "إغلاق",
+    "clientOrCase": "الموكل أو القضية",
+    "appointmentType": "نوع الموعد",
+    "assignedLawyer": "المحامي المسؤول",
+    "notes": "الملاحظات",
+    "markArrived": "تسجيل الحضور",
+    "arrived": "تم الحضور",
+    "markLate": "تحديد كمتأخر",
+    "late": "متأخر",
+    "deleteAppointment": "حذف الموعد",
+    "newAppointment": "موعد جديد",
+    "defaultVisitType": "اجتماع موكل",
+    "countLabel": "المواعيد",
+    "viewLabels": {
+      "range": "عرض الأيام",
+      "month": "عرض الشهر",
+      "doctor": "حسب المحامي"
+    },
+    "branchScope": {
+      "label": "نطاق المكتب",
+      "all": "كل المكاتب"
+    },
+    "datePickerLabel": "اختيار التاريخ",
+    "rangeDaysLabel": "عدد الأيام المعروضة",
+    "timeZoneLabel": "المنطقة الزمنية"
+  },
+  "bigCalendar": {
+    "daysLabel": "أيام",
+    "viewByDays": "عرض الأيام",
+    "viewByMonth": "عرض الشهر",
+    "viewByDoctor": "عرض المحامين",
+    "noDoctors": "لا يوجد محامون",
+    "noDoctorsDescription": "أضف محامين لعرض جداولهم هنا",
+    "doctorHeaderAppointmentCount_zero": "لا مواعيد",
+    "doctorHeaderAppointmentCount_one": "موعد واحد",
+    "doctorHeaderAppointmentCount_two": "موعدان",
+    "doctorHeaderAppointmentCount_few": "{{count}} مواعيد",
+    "doctorHeaderAppointmentCount_many": "{{count}} موعداً",
+    "doctorHeaderAppointmentCount_other": "{{count}} موعد",
+    "visitsInView_zero": "لا مواعيد في النطاق المعروض",
+    "visitsInView_one": "موعد في النطاق المعروض",
+    "visitsInView_two": "موعدان في النطاق المعروض",
+    "visitsInView_few": "{{count}} مواعيد في النطاق المعروض",
+    "visitsInView_many": "{{count}} موعداً في النطاق المعروض",
+    "visitsInView_other": "{{count}} موعد في النطاق المعروض",
+    "deleteSelectedCount": "حذف {{count}} مواعيد محددة",
+    "selectedCount_zero": "لم يتم تحديد شيء",
+    "selectedCount_one": "تم تحديد {{count}}",
+    "selectedCount_two": "تم تحديد {{count}}",
+    "selectedCount_few": "تم تحديد {{count}}",
+    "selectedCount_many": "تم تحديد {{count}}",
+    "selectedCount_other": "تم تحديد {{count}}",
+    "weekViewNotAvailable": "العرض الأسبوعي غير متاح بهذه المساحة",
+    "switchToOtherView": "اختر عرضاً آخر من شريط التقويم",
+    "monthView": {
+      "more_zero": "لا مواعيد أخرى",
+      "more_one": "موعد آخر",
+      "more_two": "موعدان آخران",
+      "more_few": "{{count}} مواعيد أخرى",
+      "more_many": "{{count}} موعداً آخر",
+      "more_other": "{{count}} موعد آخر"
+    },
+    "fullScreen": {
+      "escapeHint": "اضغط Esc للخروج من ملء الشاشة"
+    },
+    "focusedDoctor": {
+      "escapeHint": "اضغط Esc للعودة إلى جميع المحامين"
+    },
+    "untitledVisit": "موعد بلا عنوان",
+    "collision": {
+      "patient": "الموكل لديه موعد في هذا الوقت",
+      "dentist": "المحامي لديه موعد في هذا الوقت",
+      "both": "الموكل والمحامي لديهما موعد في هذا الوقت",
+      "slotBusy": "هذا الوقت محجوز مسبقاً",
+      "noAvailableSlot": "لا يوجد وقت متاح قبل الموعد التالي"
+    },
+    "eventActions": {
+      "unmarkLate": "إزالة علامة التأخير"
+    },
+    "timeZone": {
+      "selectorLabel": "اختر المنطقة الزمنية",
+      "searchPlaceholder": "ابحث عن منطقة زمنية",
+      "noResults": "لم يتم العثور على مناطق زمنية"
+    }
+  },
+  "reservations": {
+    "noPatients": {
+      "title": "لا توجد مواعيد بعد",
+      "description": "أضف موعداً لبدء استخدام التقويم"
+    }
+  }
+}

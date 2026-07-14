@@ -1,0 +1,54 @@
+import { ConvexError } from 'convex/values';
+
+// Seeded with the codes named in IMPLEMENTATION_PLAN.md §1.1.2, plus the
+// small set structurally required by the Phase 0 ladder/RBAC/provisioning
+// code that consumes them. Add a code here before ever throwing it — an
+// unaccountable error is exactly the "AI-vibe" smell the manifesto bans.
+export const ERROR_CODES = {
+  UNAUTHENTICATED: 'UNAUTHENTICATED',
+  FIRM_NOT_FOUND: 'FIRM_NOT_FOUND',
+  NOT_A_FIRM_MEMBER: 'NOT_A_FIRM_MEMBER',
+  INSUFFICIENT_PERMISSIONS: 'INSUFFICIENT_PERMISSIONS',
+  SEAT_LIMIT_REACHED: 'SEAT_LIMIT_REACHED',
+  CASE_NOT_FOUND: 'CASE_NOT_FOUND',
+  CASE_TYPE_NOT_FOUND: 'CASE_TYPE_NOT_FOUND',
+  PARTY_NOT_FOUND: 'PARTY_NOT_FOUND',
+  CASE_PARTY_ALREADY_EXISTS: 'CASE_PARTY_ALREADY_EXISTS',
+  DOCUMENT_NOT_FOUND: 'DOCUMENT_NOT_FOUND',
+  DOCUMENT_VERSION_NOT_FOUND: 'DOCUMENT_VERSION_NOT_FOUND',
+  INVALID_FILE_TYPE: 'INVALID_FILE_TYPE',
+  FILE_TOO_LARGE: 'FILE_TOO_LARGE',
+  ORIGINAL_LEDGER_ENTRY_NOT_FOUND: 'ORIGINAL_LEDGER_ENTRY_NOT_FOUND',
+  CHECK_NOT_FOUND: 'CHECK_NOT_FOUND',
+  CHECK_DETAILS_REQUIRED: 'CHECK_DETAILS_REQUIRED',
+  INSTALLMENT_PLAN_NOT_FOUND: 'INSTALLMENT_PLAN_NOT_FOUND',
+  INVALID_INSTALLMENT_AMOUNT: 'INVALID_INSTALLMENT_AMOUNT',
+  INVALID_LEDGER_AMOUNT: 'INVALID_LEDGER_AMOUNT',
+  DISBURSEMENT_BLOCKED_UNCLEARED_FUNDS: 'DISBURSEMENT_BLOCKED_UNCLEARED_FUNDS',
+  INVALID_CHECK_STATUS_TRANSITION: 'INVALID_CHECK_STATUS_TRANSITION',
+  LEDGER_BALANCE_WOULD_GO_NEGATIVE: 'LEDGER_BALANCE_WOULD_GO_NEGATIVE',
+  INSUFFICIENT_TRUST_BALANCE: 'INSUFFICIENT_TRUST_BALANCE',
+  INSUFFICIENT_CLIENT_BALANCE: 'INSUFFICIENT_CLIENT_BALANCE',
+  OWNER_ROLE_LOCKED: 'OWNER_ROLE_LOCKED',
+  ROLE_NOT_FOUND: 'ROLE_NOT_FOUND',
+  INVALID_STATUS_TRANSITION: 'INVALID_STATUS_TRANSITION',
+} as const;
+export type ErrorCode = (typeof ERROR_CODES)[keyof typeof ERROR_CODES];
+
+// The index signature is required for ConvexError<T>'s `Value` constraint
+// (a Convex wire value must be indexable) — not just `{ code: ErrorCode }`.
+interface AppErrorData {
+  code: ErrorCode;
+  [key: string]: ErrorCode;
+}
+
+export class AppError extends ConvexError<AppErrorData> {
+  constructor(code: ErrorCode) {
+    super({ code });
+    this.name = 'AppError';
+  }
+
+  get code(): ErrorCode {
+    return this.data.code;
+  }
+}

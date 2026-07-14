@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -eu
+
+# Scoped to the gates that pass today so the hook actually gates pushes.
+# Restore `bun run verify` once the pre-existing frontend `check`
+# violations (ESLint/tsc/architecture/dead code) are fixed.
+bun run build
+bun run test

@@ -1,0 +1,9 @@
+dist/
+node_modules/
+.vite/
+.turbo/
+.env
+.env.*
+!.env.example
+src/routeTree.gen.ts
+src/@types/generated

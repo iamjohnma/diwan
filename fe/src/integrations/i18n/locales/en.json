@@ -1,0 +1,791 @@
+{
+  "meta": {
+    "appTitle": "Diwan",
+    "appDescription": "Legal case management system for professional law firms"
+  },
+  "common": {
+    "appName": "Diwan",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "passwordStrength": {
+      "minLength": "8 characters",
+      "numbers": "A number",
+      "specialSymbols": "A special symbol"
+    },
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "clear": "Clear",
+    "addValue": "Add \"{{value}}\"",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "close": "Close",
+    "add": "Add",
+    "next": "Next",
+    "create": "Create",
+    "search": "Search...",
+    "menu": "Menu",
+    "updateNow": "Update now",
+    "skipToContent": "Skip to content",
+    "signOut": "Sign out",
+    "offline": "No internet connection",
+    "language": {
+      "english": "English",
+      "arabic": "Arabic"
+    },
+    "drawerAccessibility": {
+      "popoverTitle": "Options",
+      "popoverDescription": "Additional options and actions",
+      "selectTitle": "Select option",
+      "selectDescription": "Choose an option from the list",
+      "dynamicPopoverTitle": "Menu",
+      "dynamicPopoverDescription": "Account options and notifications"
+    },
+    "tooltips": {
+      "clear": "Clear",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "notifications": "Notifications",
+      "changeLanguage": "Change language",
+      "signOut": "Sign out",
+      "previous": "Previous",
+      "next": "Next",
+      "exitFullscreen": "Exit fullscreen",
+      "enterFullscreen": "Enter fullscreen"
+    },
+    "dataTable": {
+      "documents_one": "{{count}} case",
+      "documents_other": "{{count}} cases",
+      "entries_one": "case",
+      "entries_other": "cases",
+      "showingEntries": "{{start}}–{{end}} of {{total}}",
+      "criteriaEmptyTitle": "No matching results",
+      "criteriaEmptyDescription": "Your criteria doesn't match what's currently in here.",
+      "errorTitle": "Data could not be loaded",
+      "errorDescription": "Please try again in a moment.",
+      "retry": "Try again",
+      "search": "Search",
+      "searchPlaceholder": "Search",
+      "selectAllRows": "Select all rows",
+      "selectRow": "Select row"
+    },
+    "advancedFilter": {
+      "where": "Where",
+      "and": "And",
+      "or": "Or",
+      "filter": "Filter",
+      "addFilterRule": "Add filter rule",
+      "addFilterGroup": "Add filter group",
+      "remove": "Remove",
+      "duplicate": "Duplicate",
+      "turnIntoGroup": "Turn into group",
+      "value": "Value",
+      "operator": "Operator",
+      "saveChanges": "Save changes",
+      "removeFilter": "Remove filter",
+      "clearFilter": "Clear filters",
+      "operators": {
+        "contains": "contains",
+        "notContains": "does not contain",
+        "equals": "equals",
+        "notEquals": "does not equal",
+        "startsWith": "starts with",
+        "endsWith": "ends with",
+        "isEmpty": "is empty",
+        "isNotEmpty": "is not empty",
+        "greaterThan": "greater than",
+        "greaterThanOrEqual": "greater than or equal",
+        "lessThan": "less than",
+        "lessThanOrEqual": "less than or equal",
+        "isTrue": "is true",
+        "isFalse": "is false",
+        "is": "is",
+        "isNot": "is not",
+        "isAnyOf": "is any of",
+        "isNoneOf": "is none of"
+      }
+    },
+    "dialog": {
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "confirm": "Confirm",
+      "close": "Close",
+      "searchPlaceholder": "Search...",
+      "emptyList": "No results",
+      "unsavedChanges": {
+        "title": "Unsaved changes",
+        "description": "You have unsaved changes. Do you want to leave without saving?",
+        "stayButton": "Stay",
+        "leaveButton": "Leave"
+      }
+    }
+  },
+  "keyboardShortcuts": {
+    "title": "Keyboard shortcuts",
+    "hint": "Press to toggle this dialog",
+    "groups": {
+      "general": "General",
+      "calendar": "Calendar"
+    },
+    "shortcuts": {
+      "openSearch": "Open search",
+      "openAiAssistant": "Open AI assistant",
+      "toggleAiAssistantVoice": "Start or stop the voice assistant",
+      "openKeyboardShortcuts": "Open keyboard shortcuts",
+      "toggleSidebar": "Toggle sidebar",
+      "toggleFullscreen": "Toggle fullscreen",
+      "goToToday": "Go to today",
+      "scrollCalendar": "Scroll calendar",
+      "deleteSelected": "Delete selected appointments",
+      "setRangeDays": "Set visible days (range view)",
+      "exitFullscreen": "Exit fullscreen"
+    }
+  },
+  "aiAssistant": {
+    "title": "AI assistant",
+    "newConversation": "New conversation",
+    "noConversations": "No conversations yet",
+    "emptyTitle": "How can I help with your cases?",
+    "inputPlaceholder": "Ask about your cases…",
+    "threads": {
+      "empty": "No conversations yet",
+      "noResults": "No conversations found",
+      "searchPlaceholder": "Search conversations"
+    },
+    "actions": {
+      "startNewChat": "Start new chat",
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "close": "Close",
+      "minimize": "Minimize",
+      "mute": "Mute microphone",
+      "unmute": "Unmute microphone",
+      "toggleMicrophone": "Toggle microphone",
+      "stopVoice": "Stop voice assistant",
+      "stop": "Stop",
+      "voiceShortcut": "Voice assistant (Ctrl+G)",
+      "responding": "Assistant is responding",
+      "send": "Send"
+    },
+    "errors": {
+      "unavailable": "The assistant is unavailable right now. Please try again.",
+      "requestFailed": "Assistant request failed"
+    },
+    "voice": {
+      "connecting": "Connecting…",
+      "thinking": "Thinking…",
+      "speaking": "Speaking…",
+      "listening": "Listening…",
+      "holdToRecord": "Hold to record",
+      "releaseToStop": "Release to stop",
+      "voicePlaceholder": "Listening…"
+    },
+    "tools": {
+      "listingCases": "Listing cases",
+      "listedCases_one": "Listed {{count}} case",
+      "listedCases_other": "Listed {{count}} cases"
+    }
+  },
+  "commandPalette": {
+    "title": "Quick search",
+    "description": "Search system pages, cases, parties, and documents.",
+    "searchPlaceholder": "Search for a page or action...",
+    "empty": "No results",
+    "emptyDescription": "Try another word or browse the sidebar.",
+    "footer": {
+      "navigate": "Navigate",
+      "select": "Select",
+      "back": "Back",
+      "close": "Close"
+    },
+    "groups": {
+      "navigation": "Navigation",
+      "settings": "Settings",
+      "cases": "Cases",
+      "parties": "Parties",
+      "documents": "Documents",
+      "billing": "Billing"
+    },
+    "items": {
+      "dashboard": "Dashboard",
+      "calendar": "Hearings & calendar",
+      "cases": "Cases",
+      "parties": "Parties",
+      "documents": "Documents",
+      "billing": "Billing",
+      "payments": "Payments",
+      "checks": "Checks",
+      "installments": "Installments",
+      "settings": "Settings"
+    },
+    "keywords": {
+      "dashboard": ["dashboard", "home", "overview"],
+      "calendar": ["calendar", "hearings", "appointments", "schedule"],
+      "cases": ["cases", "case", "matter"],
+      "parties": ["parties", "client", "opponent"],
+      "documents": ["documents", "files"],
+      "billing": ["billing", "finance"],
+      "payments": ["payments", "receipt"],
+      "checks": ["checks", "cheque"],
+      "installments": ["installments", "installment"],
+      "settings": ["settings", "preferences"]
+    }
+  },
+  "header": {
+    "menu": "Menu",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "signOut": "Sign out",
+    "profile": "Profile",
+    "noName": "No name",
+    "updateNow": "Update now",
+    "globalSearch": "Quick search",
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "member": "Member",
+      "lawyer": "Lawyer",
+      "assistant": "Assistant"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "cards": {
+      "previous": "Previous cards",
+      "next": "Next cards"
+    },
+    "privacy": {
+      "reveal": "Show sensitive numbers",
+      "hide": "Hide sensitive numbers",
+      "clickToReveal": "Click to reveal"
+    },
+    "kpi": {
+      "revenue": {
+        "title": "My revenue",
+        "description": "Total payments received"
+      },
+      "outstanding": {
+        "title": "Outstanding fees",
+        "description": "Amounts due to you"
+      },
+      "activeCases": {
+        "title": "My active cases",
+        "description": "Open and assigned cases"
+      }
+    },
+    "fastAccess": {
+      "createCase": "Create case",
+      "createCaseUnavailable": "The create case dialog will be available in the next stage.",
+      "addHearing": "Add hearing",
+      "recordPayment": "Record payment"
+    },
+    "todayHearings": {
+      "title": "My hearings today",
+      "subtitle": "Your upcoming hearings for today",
+      "add": "Add hearing",
+      "caseLabel": "Case {{number}}",
+      "unknownLawyer": "Unknown lawyer",
+      "countdownMinutes": "in {{count}}m",
+      "countdownHours": "in {{count}}h",
+      "countdownHoursMinutes": "in {{hours}}h {{minutes}}m",
+      "empty": {
+        "title": "No hearings scheduled",
+        "description": "There are no upcoming hearings today."
+      }
+    },
+    "cashFlow": {
+      "title": "Cash flow",
+      "subtitle": "Your income over time",
+      "income": "Income",
+      "chartLabel": "Income cash flow chart",
+      "periods": {
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      }
+    },
+    "allCases": {
+      "title": "My cases",
+      "subtitle": "Cases registered and assigned to you",
+      "search": "Search cases",
+      "clearSearch": "Clear search",
+      "filters": {
+        "all": "All cases"
+      },
+      "emptyTitle": "No cases match the current filters",
+      "emptyDescription": "Try adjusting your search or filters to find what you are looking for.",
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      }
+    }
+  },
+  "signIn": {
+    "pageHeader": {
+      "title": "Welcome back",
+      "subtitle": "Log in to continue."
+    },
+    "formContent": {
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "emailPlaceholder": "Enter email address",
+      "passwordPlaceholder": "Enter password",
+      "forgotPassword": "Forgot password?",
+      "submitButton": "Login",
+      "separator": "OR",
+      "googleButton": "Continue with Google"
+    },
+    "formFooter": {
+      "accountPrompt": "Don't have an account?",
+      "actionLink": "Sign up"
+    },
+    "validation": {
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Invalid email address",
+      "passwordRequired": "Please enter your password"
+    }
+  },
+  "signUp": {
+    "pageHeader": {
+      "title": "Welcome to Diwan",
+      "subtitle": "Create your account to continue."
+    },
+    "formContent": {
+      "firstNameLabel": "First name",
+      "lastNameLabel": "Last name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "firstNamePlaceholder": "Enter first name",
+      "lastNamePlaceholder": "Enter last name",
+      "emailPlaceholder": "Enter email address",
+      "passwordPlaceholder": "Enter password",
+      "submitButton": "Create account",
+      "separator": "OR",
+      "googleButton": "Continue with Google"
+    },
+    "formFooter": {
+      "accountPrompt": "Already have an account?",
+      "actionLink": "Login"
+    },
+    "validation": {
+      "firstNameRequired": "Please enter your first name",
+      "firstNameMin": "First name must be at least 2 characters",
+      "firstNameMax": "First name must be at most 50 characters",
+      "lastNameRequired": "Please enter your last name",
+      "lastNameMin": "Last name must be at least 2 characters",
+      "lastNameMax": "Last name must be at most 50 characters",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Invalid email address",
+      "emailMax": "Email must be at most 255 characters",
+      "passwordRequired": "Please enter your password",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordMax": "Password must be at most 128 characters",
+      "passwordNumber": "Password must include a number",
+      "passwordSpecialSymbol": "Password must include a special symbol"
+    }
+  },
+  "forgotPassword": {
+    "pageHeader": {
+      "title": "Forgot your password?",
+      "subtitle": "Enter your email to receive a reset code."
+    },
+    "formContent": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter email address",
+      "submitButton": "Send reset code"
+    },
+    "formFooter": { "backToSignIn": "Back to login" },
+    "validation": {
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Invalid email address"
+    }
+  },
+  "verifyOtp": {
+    "pageHeader": {
+      "emailVerification": {
+        "title": "Verify your email",
+        "subtitle": "We sent a verification code to <email>{{email}}</email>."
+      },
+      "resetPassword": {
+        "title": "Enter reset code",
+        "subtitle": "We sent a password reset code to <email>{{email}}</email>."
+      },
+      "subtitleFallback": "Enter the verification code from your email."
+    },
+    "codeInputLabel": "Verification code",
+    "pageFooter": {
+      "resendPrompt": "Didn't receive a code?",
+      "resendButton": "Resend",
+      "resendUnavailable": "Check your inbox for the code."
+    },
+    "validation": {
+      "codeRequired": "Please enter the verification code",
+      "codeLength": "Code must be 5 digits",
+      "codeNumeric": "Code must be numeric"
+    }
+  },
+  "setNewPassword": {
+    "pageHeader": {
+      "title": "Set new password",
+      "subtitle": "Create a strong password for your account."
+    },
+    "formContent": {
+      "passwordLabel": "New password",
+      "passwordPlaceholder": "Enter new password",
+      "confirmPasswordLabel": "Confirm password",
+      "confirmPasswordPlaceholder": "Enter password confirmation",
+      "submitButton": "Reset password"
+    },
+    "validation": {
+      "passwordRequired": "Please enter a password",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordMax": "Password must be at most 128 characters",
+      "passwordNumber": "Password must include a number",
+      "passwordSpecialSymbol": "Password must include a special symbol",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordsMustMatch": "Passwords do not match"
+    },
+    "success": "Password reset successfully"
+  },
+  "errors": {
+    "default": "Could not complete the operation. Please try again.",
+    "route": {
+      "title": "Something went wrong",
+      "description": "Sorry for the inconvenience. Try reloading the page.",
+      "retry": "Try again",
+      "reload": "Reload"
+    },
+    "notFoundPage": {
+      "title": "Page not found",
+      "description": "The link you requested is unavailable or has been moved.",
+      "backHome": "Back to home"
+    },
+    "code": {
+      "UNAUTHENTICATED": "Your session expired. Please sign in again.",
+      "NOT_A_FIRM_MEMBER": "You are not a member of this firm.",
+      "INSUFFICIENT_PERMISSIONS": "You do not have permission for this action.",
+      "INVALID_ACCOUNT_ID": "Incorrect email or password.",
+      "INVALID_PASSWORD": "Incorrect email or password.",
+      "INVALID_SECRET": "Incorrect email or password.",
+      "INVALID_CREDENTIALS": "Incorrect email or password.",
+      "INVALID_VERIFICATION_CODE": "The verification code is incorrect or has expired.",
+      "INVALID_AUTH_FLOW": "This sign-in request is no longer valid. Please start again.",
+      "EMAIL_REQUIRED": "Enter your email address.",
+      "PASSWORD_REQUIRED": "Enter your password.",
+      "PASSWORD_TOO_SHORT": "Password must be at least 8 characters.",
+      "PASSWORD_TOO_LONG": "Password cannot exceed 128 characters.",
+      "PASSWORD_REQUIRES_NUMBER": "Password must include a number.",
+      "PASSWORD_REQUIRES_SPECIAL_SYMBOL": "Password must include a special character.",
+      "NEW_PASSWORD_REQUIRED": "Enter your new password.",
+      "ACCOUNT_ALREADY_EXISTS": "An account with this email already exists.",
+      "ACCOUNT_DISABLED": "This account has been disabled. Contact support for help.",
+      "GOOGLE_OAUTH_NOT_CONFIGURED": "Google sign-in is not configured yet.",
+      "INVALID_GOOGLE_CREDENTIAL": "Google could not verify this sign-in. Please try again.",
+      "GOOGLE_ID_TOKEN_REQUIRED": "Google did not return a valid sign-in credential. Please try again."
+    }
+  },
+  "sidebar": {
+    "navigationLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "globalSearch": {
+      "placeholder": "Search anything",
+      "ariaLabel": "Quick search"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllAsRead": "Mark all as read",
+    "markAsRead": "Mark as read",
+    "empty": "No notifications",
+    "emptyDescription": "Notifications will appear here when something happens",
+    "preferencesOpenLabel": "Notification preferences"
+  },
+  "settings": {
+    "title": "Settings",
+    "cancel": "Cancel",
+    "saveChanges": "Save changes",
+    "tabs": {
+      "profile": "Profile",
+      "appearance": "Appearance"
+    },
+    "profile": {
+      "noName": "No name",
+      "accountPhoto": "Account photo",
+      "fullName": "Full name",
+      "userId": "User ID",
+      "email": "Email",
+      "role": "Role",
+      "change": "Change",
+      "copy": "Copy",
+      "idCopied": "User ID copied",
+      "emailCopied": "Email copied",
+      "roles": {
+        "owner": "Owner",
+        "admin": "Administrator",
+        "partner": "Partner",
+        "lawyer": "Lawyer",
+        "associate": "Associate",
+        "assistant": "Assistant",
+        "finance": "Finance",
+        "member": "Member"
+      }
+    },
+    "password": {
+      "label": "Password",
+      "description": "Change the password used to sign in to your account.",
+      "changeAction": "Change password"
+    },
+    "editNameDialog": {
+      "title": "Change name",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Enter your full name"
+    },
+    "appearance": {
+      "systemColor": {
+        "title": "System color",
+        "description": "Choose the accent color used throughout the system.",
+        "selectColor": "Use {{color}} as the system color",
+        "custom": "Choose a custom color",
+        "saveColor": "Save this custom color",
+        "maxColorsReached": "You can have a maximum of {{count}} colors.",
+        "foregroundOverride": {
+          "auto": "Auto text color",
+          "dark": "Force dark text",
+          "light": "Force light text",
+          "description": "Text color override: {{mode}}"
+        }
+      },
+      "fontSize": {
+        "title": "Font size",
+        "description": "Adjust text size throughout the system.",
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large"
+      },
+      "language": {
+        "title": "Language",
+        "description": "Choose the system language and reading direction.",
+        "system": "System"
+      },
+      "hideNumbers": {
+        "title": "Hide sensitive numbers",
+        "description": "Hide sensitive financial and identification numbers.",
+        "hidden": "Hidden",
+        "visible": "Visible"
+      },
+      "fastAccessButtons": {
+        "title": "Dashboard top cards",
+        "description": "Choose whether top cards show KPIs or quick actions.",
+        "kpis": "KPI cards",
+        "actions": "Quick actions"
+      },
+      "commandPaletteOnType": {
+        "title": "Open quick search when typing",
+        "description": "Start typing anywhere to open quick search immediately.",
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "unsavedChangesBehaviour": {
+        "title": "Unsaved changes",
+        "description": "Choose what happens when leaving a form with unsaved changes.",
+        "ask": "Ask first",
+        "discard": "Discard"
+      },
+      "tableRowsFill": {
+        "title": "Table rows",
+        "description": "Choose whether table rows fill the available height.",
+        "fill": "Fill space",
+        "fixed": "Fixed height"
+      },
+      "sidebar": {
+        "title": "Sidebar",
+        "description": "Choose how the sidebar appears when the system opens.",
+        "open": "Open",
+        "closed": "Closed",
+        "remember": "Remember last state"
+      }
+    }
+  },
+  "fontSize": {
+    "label": "Font size",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large"
+  },
+  "placeholderPage": {
+    "description": "This module is under construction and will be available in upcoming updates."
+  },
+  "cases": {
+    "all": "All",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "addCase": "Add case",
+    "searchPlaceholder": "Search cases",
+    "emptyTitle": "No cases yet",
+    "emptyDescription": "Firm cases will appear here after they are added.",
+    "criteriaEmptyTitle": "No matching cases",
+    "criteriaEmptyDescription": "There are no cases with this status right now.",
+    "errorTitle": "Could not load cases",
+    "errorDescription": "Please try again in a moment.",
+    "retry": "Try again",
+    "columns": {
+      "internalNumber": "Case number",
+      "courtNumber": "Court number",
+      "courtName": "Court",
+      "caseType": "Case type",
+      "primaryLawyer": "Lead lawyer",
+      "claimAmount": "Claim amount",
+      "status": "Status",
+      "createdAt": "Created at"
+    },
+    "statuses": {
+      "intake": "Intake",
+      "filed": "Filed",
+      "in_hearings": "In hearings",
+      "verdict": "Verdict issued",
+      "execution": "In execution",
+      "closed": "Closed",
+      "archived": "Archived"
+    },
+    "labels": {
+      "entries_one": "case",
+      "entries_other": "cases",
+      "documents_one": "{{count}} case",
+      "documents_other": "{{count}} cases"
+    },
+    "createDialog": {
+      "title": "Add case",
+      "partiesTitle": "Case parties",
+      "reviewTitle": "Review & create",
+      "addParty": "Add party",
+      "partiesEmpty": "No parties added yet. You can continue now and add them later unless the case type requires them.",
+      "partiesNone": "No parties",
+      "primaryLawyerFallback": "You",
+      "success": "Case created successfully",
+      "fields": {
+        "internalNumber": "Internal number",
+        "courtNumber": "Court case number",
+        "caseType": "Case type",
+        "courtName": "Court name",
+        "claimAmount": "Claim amount",
+        "primaryLawyer": "Lead lawyer",
+        "parties": "Parties",
+        "partyFullName": "Full name",
+        "partyNationalId": "National ID",
+        "partyRole": "Party role"
+      },
+      "placeholders": {
+        "internalNumber": "Enter internal number",
+        "courtNumber": "Enter court number",
+        "caseType": "Select case type",
+        "courtName": "Enter court name",
+        "claimAmount": "Enter claim amount",
+        "partyFullName": "Enter party name",
+        "partyNationalId": "Enter National ID",
+        "partyRole": "Select role"
+      },
+      "roles": {
+        "plaintiff": "Plaintiff",
+        "defendant": "Defendant",
+        "guardian": "Guardian",
+        "intervener": "Intervener",
+        "witness": "Witness",
+        "other": "Other"
+      },
+      "validation": {
+        "internalNumberRequired": "Internal number is required",
+        "caseTypeRequired": "Case type is required",
+        "nationalIdRequired": "National ID is required",
+        "fullNameRequired": "Full name is required",
+        "roleRequired": "Party role is required",
+        "claimAmountInvalid": "Enter a valid claim amount",
+        "requiredRoleMissing": "Add a party with the {{role}} role before continuing"
+      },
+      "errors": {
+        "caseTypesUnavailable": "Could not load case types",
+        "noCaseTypes": "No case types yet. Add them in settings first.",
+        "profileUnavailable": "Could not resolve the lead lawyer"
+      }
+    }
+  },
+  "calendarPage": {
+    "title": "Hearings & calendar",
+    "eventDetails": "Appointment details",
+    "close": "Close",
+    "clientOrCase": "Client or case",
+    "appointmentType": "Appointment type",
+    "assignedLawyer": "Assigned lawyer",
+    "notes": "Notes",
+    "markArrived": "Mark arrived",
+    "arrived": "Arrived",
+    "markLate": "Mark as late",
+    "late": "Late",
+    "deleteAppointment": "Delete appointment",
+    "newAppointment": "New appointment",
+    "defaultVisitType": "Client meeting",
+    "countLabel": "Appointments in view",
+    "viewLabels": {
+      "range": "Days view",
+      "month": "Month view",
+      "doctor": "By lawyer"
+    },
+    "branchScope": {
+      "label": "Office scope",
+      "all": "All offices"
+    },
+    "datePickerLabel": "Pick date",
+    "rangeDaysLabel": "Visible days",
+    "timeZoneLabel": "Time zone"
+  },
+  "bigCalendar": {
+    "daysLabel": "Days",
+    "viewByDays": "View by days",
+    "viewByMonth": "View by month",
+    "viewByDoctor": "View by lawyer",
+    "noDoctors": "No lawyers available",
+    "noDoctorsDescription": "Add lawyers to see their schedules here",
+    "doctorHeaderAppointmentCount_one": "{{count}} appointment",
+    "doctorHeaderAppointmentCount_other": "{{count}} appointments",
+    "visitsInView_one": "Appointment in view",
+    "visitsInView_other": "Appointments in view",
+    "deleteSelectedCount": "Delete {{count}} selected appointments",
+    "selectedCount_one": "{{count}} selected",
+    "selectedCount_other": "{{count}} selected",
+    "weekViewNotAvailable": "Multi-day view is not available in this space",
+    "switchToOtherView": "Choose another view from the calendar toolbar",
+    "monthView": {
+      "more_one": "1 more appointment",
+      "more_other": "{{count}} more appointments"
+    },
+    "fullScreen": {
+      "escapeHint": "Press Esc to exit fullscreen"
+    },
+    "focusedDoctor": {
+      "escapeHint": "Press Esc to return to all lawyers"
+    },
+    "untitledVisit": "Untitled appointment",
+    "collision": {
+      "patient": "Client already booked at this time",
+      "dentist": "Lawyer already booked at this time",
+      "both": "Client and lawyer already booked",
+      "slotBusy": "Already booked at this time",
+      "noAvailableSlot": "No available time before the next appointment"
+    },
+    "eventActions": {
+      "unmarkLate": "Remove late mark"
+    },
+    "timeZone": {
+      "selectorLabel": "Select timezone",
+      "searchPlaceholder": "Search timezones",
+      "noResults": "No timezones found"
+    }
+  },
+  "reservations": {
+    "noPatients": {
+      "title": "No appointments yet",
+      "description": "Add an appointment to start using the calendar"
+    }
+  }
+}

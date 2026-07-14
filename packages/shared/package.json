@@ -1,0 +1,19 @@
+{
+  "name": "@diwan/shared",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "check": "tsc -p tsconfig.json --noEmit --pretty",
+    "build": "bun run check"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,1 @@
+export { AiAssistantManager } from './manager';

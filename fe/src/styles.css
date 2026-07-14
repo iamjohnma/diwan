@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@import './styles/colors.css';
+@import './styles/theme.css';
+@import './styles/fonts.css';
+@import './styles/base.css';
+@import './styles/utils.css';
+@import './styles/animations.css';
+@import './styles/sonner.css';
+@import './styles/prompt-kit.css';
+
+@custom-variant starting (&[data-starting-style]);
+@custom-variant ending (&[data-ending-style]);
+
+@layer base {
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  #root {
+    height: 100dvh;
+    isolation: isolate;
+    overflow: hidden;
+  }
+}

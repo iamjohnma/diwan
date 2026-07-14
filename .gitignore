@@ -1,0 +1,19 @@
+.DS_Store
+node_modules/
+.turbo/
+.env
+.env.local
+dist/
+coverage/
+build/
+.vercel/
+.convex/
+.turbo/
+coverage/
+*.tsbuildinfo
+.worktrees/
+
+# Convex AI guidance and skills are managed once at the repository root.
+be/.agents/
+be/.claude/
+be/skills-lock.json
