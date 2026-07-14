@@ -181,3 +181,29 @@ After coordinator feedback that the first port was not faithful enough:
 - Added `@diwan-be` Vite alias + TypeScript path mapping to `../be` so the
   frontend can import generated Convex bindings, e.g.
   `import { api } from '@diwan-be/convex/_generated/api'`.
+
+## Dashboard section-title consistency (branch cursor/fix-section-title-consistency-e35a)
+
+The قضاياي ("My Cases") section title on the dashboard rendered larger than
+the other section titles on the same page. All three titled dashboard
+sections now share one canonical header style — title
+`text-base font-semibold text-text-primary` (16px at every breakpoint),
+subtitle `hidden text-sm font-normal text-text-tertiary md:block`:
+
+- `fe/src/components/pages/_app/dashboard/all-cases-section.tsx` — title was
+  `md:text-xl` (20px on desktop, the reported outlier); subtitle used
+  `text-text-secondary` instead of `text-text-tertiary`.
+- `fe/src/components/pages/_app/dashboard/today-hearings.tsx` — title was
+  `text-sm` on mobile (14px, smaller than siblings).
+- `fe/src/components/common/chart-section-header.tsx` — dropped the
+  redundant `md:text-base` on the title; subtitle `text-xs` → `text-sm`
+  (it is `hidden` below `md`, so no visual change on mobile). Prettier also
+  collapsed a pre-existing multi-line `SelectValue` in this file.
+
+Notes for the merger:
+
+- Tailwind classes only; no logic, i18n, backend, or shared changes.
+- `ChartSectionHeader` is only consumed by the dashboard cash-flow section
+  (verified via grep), so no other pages are affected.
+- The `md:text-xl` in `top-cards.tsx` is a fast-access card button label,
+  not a section title — intentionally untouched.

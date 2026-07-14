@@ -134,7 +134,7 @@ export function TodayHearingsSection() {
       <Card className="flex min-h-0 w-full flex-col gap-y-3 overflow-hidden px-3 py-3 sm:max-h-97 sm:flex-1 md:gap-y-4 md:px-5 md:py-4 xl:max-h-97">
         <div className="flex items-start justify-between gap-x-3">
           <div className="flex flex-col">
-            <h2 className="text-sm font-semibold text-text-primary md:text-base">
+            <h2 className="text-base font-semibold text-text-primary">
               {translation.t('dashboard.todayHearings.title')}
             </h2>
             <p className="hidden text-sm font-normal text-text-tertiary md:block">

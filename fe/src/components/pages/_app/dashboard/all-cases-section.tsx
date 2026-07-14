@@ -162,10 +162,10 @@ export function AllCasesSection() {
   return (
     <Card className="@container flex flex-col gap-0 overflow-hidden px-3 py-3 md:px-5 md:py-4 xl:grow">
       <div className="mb-4 flex flex-col">
-        <h2 className="text-base font-semibold text-text-primary md:text-xl">
+        <h2 className="text-base font-semibold text-text-primary">
           {translation.t('dashboard.allCases.title')}
         </h2>
-        <p className="hidden text-sm text-text-secondary md:block">
+        <p className="hidden text-sm font-normal text-text-tertiary md:block">
           {translation.t('dashboard.allCases.subtitle')}
         </p>
       </div>

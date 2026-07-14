@@ -27,10 +27,10 @@ export function ChartSectionHeader(props: ChartSectionHeaderProps) {
       )}
     >
       <CardTitle className="flex flex-col gap-y-0">
-        <span className="text-base font-semibold text-text-primary md:text-base">
+        <span className="text-base font-semibold text-text-primary">
           {props.title}
         </span>
-        <span className="hidden text-xs font-normal text-text-tertiary md:block md:text-sm">
+        <span className="hidden text-sm font-normal text-text-tertiary md:block">
           {props.subtitle}
         </span>
       </CardTitle>
@@ -65,9 +65,7 @@ export function ChartPeriodSelect<T extends string>(
           props.triggerClassName
         )}
       >
-        <SelectValue>
-          {translation.t(selectedOption.labelKey)}
-        </SelectValue>
+        <SelectValue>{translation.t(selectedOption.labelKey)}</SelectValue>
       </SelectTrigger>
       <SelectContent align="end" sideOffset={4}>
         {props.options.map((option) => (
