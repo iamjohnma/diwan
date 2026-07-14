@@ -96,6 +96,25 @@ and `bunx convex data <table>`.
 - Focused commands are available through `bun run --cwd fe ...` and
   `bun run --cwd be ...`.
 
+### Cursor Cloud specific instructions
+
+- Cloud agents boot from a pinned VM snapshot declared in
+  `.cursor/environment.json` (`snapshot` field). That committed file is the
+  source of truth for the cloud environment, so any dashboard/snapshot-managed
+  update script is a no-op — change the cloud setup by editing
+  `.cursor/environment.json` (its `install` runs on startup and must stay
+  idempotent). The snapshot preserves installed tooling and the Desktop
+  browser's signed-in session; snapshots can expire after inactivity, in which
+  case Cursor falls back to the base image, still runs `install`, and the
+  signed-in state is lost (re-seed with `bun run seed:demo` and sign in as
+  `owner@diwan.test` / `Diwan123!`).
+- The local stack auto-starts via the `diwan-dev` `terminals` entry (`bun run
+  dev`): Vite on `:3000`, anonymous local Convex API `:3212` / site `:3213`.
+  Don't start a second `bun run dev` — inspect the existing `diwan-dev` tmux
+  terminal first.
+- `bun` lives at `$HOME/.bun/bin`; non-interactive shells don't source
+  `~/.bashrc`, so `.cursor/environment.json` calls it by absolute path.
+
 <!-- convex-ai-start -->
 
 This project uses [Convex](https://convex.dev) as its backend.

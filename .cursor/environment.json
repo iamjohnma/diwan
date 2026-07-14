@@ -1,0 +1,11 @@
+{
+  "snapshot": "snapshot-20260714-f2a27875-2d9d-49d7-a37c-d05477db7010",
+  "install": "$HOME/.bun/bin/bun install\n[ -f fe/.env.local ] || cp fe/.env.example fe/.env.local",
+  "terminals": [
+    {
+      "name": "diwan-dev",
+      "command": "$HOME/.bun/bin/bun run dev",
+      "description": "Diwan local stack: Vite frontend on :3000 plus anonymous local Convex API :3212 / site :3213."
+    }
+  ]
+}
