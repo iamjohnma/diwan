@@ -181,7 +181,20 @@ const CalendarDoctorViewInner = function CalendarDoctorViewInner() {
   const locale = i18n.language === 'ar' ? ar : enUS;
   const isRtlLayout = i18n.dir() === 'rtl';
   const selectedTimeZone = calendar.timeZone;
-  const doctors = calendar.doctors ?? EMPTY_DOCTORS;
+  const allDoctors = calendar.doctors ?? EMPTY_DOCTORS;
+  const focusedDoctorId = calendar.focusedDoctorId;
+  // Focusing a doctor (clicking their column header) narrows the view to that
+  // single column. Display-only: collision checks keep running against the
+  // full `collisionIntervals`, so focus can never hide a double-booking. A
+  // stale focus id that matches no doctor falls back to showing everyone.
+  const doctors = useMemo(() => {
+    if (!focusedDoctorId) return allDoctors;
+    const focusedDoctors = allDoctors.filter(
+      (doctor) => doctor.id === focusedDoctorId
+    );
+
+    return focusedDoctors.length > 0 ? focusedDoctors : allDoctors;
+  }, [allDoctors, focusedDoctorId]);
   const visibleDoctorIds = useMemo(
     () => new Set(doctors.map((doctor) => doctor.id)),
     [doctors]
